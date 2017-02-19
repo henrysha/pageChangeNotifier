@@ -25,7 +25,7 @@ Parser parses table from the page, so it only checks the difference in the table
 This is due to the original intended usage of the author, so feel free to modify when you use.
 
 
-####Contact
+###Contact
 If you have any ideas, or comments, feel free to [email](mailto:sha16@illinois.edu) me
 
 If you feel like you want to hire me, please visit my [Linkedin](https://www.linkedin.com/in/henryseongwookha) or [email](mailto:sha16@illinois.edu) me!
