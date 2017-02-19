@@ -31,7 +31,7 @@ def send_email(user, pwd, recipient, subject, body):
     except:
         print "failed to send mail"
 
-def comparePage():
+def comparePage(senderId, senderPw, emailAddr, url, emailSubject, emailContent):
     page = requests.get(url)
     soup = BeautifulSoup(page.content,'html.parser')
 
@@ -50,3 +50,4 @@ def comparePage():
                 orig.write(data)
         send_email(senderId,senderPw,emailAddr,emailSubject,emailContent + '\n go to : '+url+' to check it out!')
 
+comparePage(senderId, senderPw, emailAddr, url, emailSubject, emailContent)
