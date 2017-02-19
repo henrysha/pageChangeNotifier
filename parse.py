@@ -31,21 +31,22 @@ def send_email(user, pwd, recipient, subject, body):
     except:
         print "failed to send mail"
 
-page = requests.get(url)
-soup = BeautifulSoup(page.content,'html.parser')
+def comparePage():
+    page = requests.get(url)
+    soup = BeautifulSoup(page.content,'html.parser')
 
-new_file = 'content.html'
-original_file = 'original.html'
-file = open(new_file, 'w')
-for table in soup.find_all('table'):
-    data = table.encode('utf-8') + '\n'
-    file.write(data)
-file.close
-if not(filecmp.cmp(new_file,original_file,shallow=False)):
-    print 'not identical'
-    with open(original_file, 'w') as orig:
-        with open(new_file, 'r') as new:
-            data = new.read()
-            orig.write(data)
-    send_email(senderId,senderPw,emailAddr,emailSubject,emailContent + '\n go to : '+url+' to check it out!')
+    new_file = 'content.html'
+    original_file = 'original.html'
+    file = open(new_file, 'w')
+    for table in soup.find_all('table'):
+        data = table.encode('utf-8') + '\n'
+        file.write(data)
+    file.close
+    if not(filecmp.cmp(new_file,original_file,shallow=False)):
+        print 'not identical'
+        with open(original_file, 'w') as orig:
+            with open(new_file, 'r') as new:
+                data = new.read()
+                orig.write(data)
+        send_email(senderId,senderPw,emailAddr,emailSubject,emailContent + '\n go to : '+url+' to check it out!')
 
