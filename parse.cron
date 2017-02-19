@@ -1,4 +1,4 @@
-00 00 * * * python parse.py
-00 06 * * * python parse.py
-00 12 * * * python parse.py
-00 18 * * * python parse.py
+0 0 * * * python parse.py
+0 6 * * * python parse.py
+0 12 * * * python parse.py
+0 18 * * * python parse.py
