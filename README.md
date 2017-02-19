@@ -21,8 +21,8 @@ crontab parse.cron
 ```
 To automatically parse and compare the webpage
 ### Note
-Parser parses table from the page, so it only checks the difference in the tables of the page.
-This is due to the original intended usage of the author, so feel free to modify when you use.
+>Parser parses table from the page, so it only checks the difference in the tables of the page.
+>This is due to the original intended usage of the author, so feel free to modify when you use.
 
 
 ### Contact
