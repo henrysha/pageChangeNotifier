@@ -7,6 +7,8 @@ senderId = 'YOUR GMAIL ID'
 senderPw = 'YOUR GMAIL PASSWORD'
 emailAddr = 'ADDRESS TO SEND MAIL'
 url = 'URL TO PARSE'
+emailSubject = 'EMAIL SUBJECT'
+emailContent = 'EMAIL CONTENT'
 
 def send_email(user, pwd, recipient, subject, body):
     gmail_user = user
@@ -45,5 +47,5 @@ if not(filecmp.cmp(new_file,original_file,shallow=False)):
         with open(new_file, 'r') as new:
             data = new.read()
             orig.write(data)
-    send_email(senderId,senderPw,emailAddr,'New MATH286 Homework Alert!','New homework has been uploaded!\n go to : '+url+' to check it out!')
+    send_email(senderId,senderPw,emailAddr,emailSubject,emailContent + '\n go to : '+url+' to check it out!')
 
